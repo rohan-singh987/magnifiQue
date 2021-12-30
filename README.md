@@ -1,0 +1,1 @@
+`yarn add @sanity/client @sanity/image-url react-google-login react-icons react-loader-spinner react-masonry-css react-router-dom uuid`
