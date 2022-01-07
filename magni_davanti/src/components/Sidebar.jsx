@@ -1,10 +1,10 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { IoIosArrowForward } from 'react-icons/io';
-
 import { RiHomeFill } from 'react-icons/ri'
 
 import Logo from '../assets/Llogo.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const isNotActiveStyle = 'flex items-center px-5 gap-3 text-gray-500 hover:text-black transition-all duration-200 ease-in-out capitalize';
 const isActiveStyle = 'flex items-center px-5 gap-3 font-extrabold border-r-2 border-black  transition-all duration-200 ease-in-out capitalize';
@@ -55,6 +55,29 @@ const Sidebar = ({ closeToggle, user }) => {
         </div>
       </div>
 
+      <div className ="px-5 mt-40 justify-center items-center ">
+            <h5 className="ml-2">MagniFique by Rohan</h5>
+      <div className ="flex justify-center">
+
+
+          <a href="https://twitter.com/Rohan_Singh2003" className ="w-8 h-8  border-2 border-gray-400 rounded-full text-center py-1  text-gray-600 hover:text-white hover:bg-blue-400 hover:border-blue-400">
+          <FontAwesomeIcon icon={['fab', 'twitter']} />
+          </a>
+
+          <a href="https://www.linkedin.com/in/rohan-singh-a783541b5/" className ="w-8 h-8  border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-600 hover:border-blue-600" >
+          <FontAwesomeIcon icon={['fab', 'linkedin']} />
+          </a>
+         
+         
+          <a href="https://github.com/rohan-singh987" className ="w-8 h-8  border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-gray-600 hover:border-gray-600" >
+          <FontAwesomeIcon icon={['fab', 'github']} />    
+          </a>
+          
+          <a href="https://www.facebook.com" className ="w-8 h-8  border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-600 hover:border-blue-600">
+          <FontAwesomeIcon icon={['fab', 'facebook']} />
+      </a>
+         </div>
+      </div>
       {user && (
         <Link
           to={`user-profile/${user._id}`}
@@ -66,6 +89,7 @@ const Sidebar = ({ closeToggle, user }) => {
           <IoIosArrowForward />
         </Link>
       )}
+
     </div>
   )
 }

@@ -34,6 +34,9 @@ const Home = () => {
     }, [])
 
     return (
+      <div>
+
+      
         <div className="flex bg-gradient-to-r from-[#ad9cd3] via-[#D6E5FA] to-[#baabdaaa]	 md:flex-row flex-col h-screen transition-height duration-75 ease-out">
         <div className="hidden md:flex h-screen flex-initial">
           <Sideabar user={user && user} />
@@ -64,6 +67,7 @@ const Home = () => {
           </Routes>
         </div>
       </div>
+    </div>
     )
 }
 

@@ -3,6 +3,8 @@ import './App.css';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import Login from './components/Login';
 import Home from './container/Home';
+import initFontAwesome from "./initFontAwesome";
+initFontAwesome();
 
 function App() {
 
@@ -16,10 +18,16 @@ function App() {
 
   return (
     
+    <div>
+
     <Routes>
         <Route path="login" element={<Login />} />
         <Route path="/*" element={<Home />} />
     </Routes>
+
+  
+    
+    </div>
   );
 }
 
