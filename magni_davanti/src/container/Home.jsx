@@ -8,6 +8,7 @@ import { client } from '../client'
 import Pins from './Pins'
 import logo from '../assets/Llogo.png'
 import { userQuery } from '../utils/data'
+import { fetchUser } from '../utils/fetchUser';
 
 const Home = () => {
 
@@ -16,7 +17,7 @@ const Home = () => {
     const scrollRef = useRef(null)
     
     
-    const userInfo = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
+    const userInfo = fetchUser();
 
     useEffect(() => {
         const query = userQuery(userInfo?.googleId);
@@ -33,12 +34,12 @@ const Home = () => {
     }, [])
 
     return (
-        <div className="flex bg-gray-50 md:flex-row flex-col h-screen transition-height duration-75 ease-out">
+        <div className="flex bg-gradient-to-r from-[#ad9cd3] via-[#D6E5FA] to-[#baabdaaa]	 md:flex-row flex-col h-screen transition-height duration-75 ease-out">
         <div className="hidden md:flex h-screen flex-initial">
           <Sideabar user={user && user} />
         </div>
         <div className="flex md:hidden flex-row">
-          <div className="p-2 w-full flex flex-row justify-between items-center shadow-md">
+          <div className="p-2 w-full flex flex-row justify-between items-center shadow-md bg-stone-200">
             <HiMenu fontSize={40} className="cursor-pointer" onClick={() => setToggleSidebar(true)} />
             <Link to="/">
               <img src={logo} alt="logo" className="w-28" />
