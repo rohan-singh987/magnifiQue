@@ -74,7 +74,7 @@ const Pin = ({ pin }) => {
                   onClick={(e) => {
                     e.stopPropagation();
                   }}
-                  className="bg-white w-9 h-9 p-2 rounded-full flex items-center justify-center text-dark text-xl opacity-75 hover:opacity-100 hover:shadow-md outline-none"
+                  className="bg-gradient-to-t from-[#92A9BD] w-9 h-9 p-2 rounded-full flex items-center justify-center text-dark text-xl opacity-75 hover:opacity-100 hover:shadow-md outline-none"
                 ><MdDownloadForOffline />
                 </a>
               </div>
@@ -105,7 +105,7 @@ const Pin = ({ pin }) => {
                 <a
                   href={destination}
                   target="_blank"
-                  className="bg-white flex items-center gap-2 text-black font-bold p-2 pl-4 pr-4 rounded-full opacity-70 hover:opacity-100 hover:shadow-md"
+                  className=" bg-gradient-to-t from-[#92A9BD] flex items-center gap-2 text-black font-bold p-2 pl-4 pr-4 rounded-full opacity-70 hover:opacity-100 hover:shadow-md"
                   rel="noreferrer"
                 >
                   {' '}
