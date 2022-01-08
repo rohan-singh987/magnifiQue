@@ -3,19 +3,13 @@ import { NavLink, Link } from 'react-router-dom'
 import { IoIosArrowForward } from 'react-icons/io';
 import { RiHomeFill } from 'react-icons/ri'
 
+import { categories } from '../utils/data.js';
 import Logo from '../assets/Llogo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+
 const isNotActiveStyle = 'flex items-center px-5 gap-3 text-gray-500 hover:text-black transition-all duration-200 ease-in-out capitalize';
 const isActiveStyle = 'flex items-center px-5 gap-3 font-extrabold border-r-2 border-black  transition-all duration-200 ease-in-out capitalize';
-const categories = [
-  { name: "Animals" },
-  { name: "Wallpaper" },
-  { name: "Photography" },
-  { name: "Gaming" },
-  { name: "Coding" },
-  { name: "Others" },
-]
 
 const Sidebar = ({ closeToggle, user }) => {
   const handleCloseSidebar = () => {
@@ -41,7 +35,7 @@ const Sidebar = ({ closeToggle, user }) => {
             <RiHomeFill />
             Home
           </NavLink>
-          <h3 className="mt-2 px-5 text-base 2xl:text-xl">Discover cateogries</h3>
+          <h3 className="mt-1 px-5 text-base 2xl:text-xl">Discover cateogries</h3>
           {categories.slice(0, categories.length - 1).map((category) => (
             <NavLink
               to={`/category/${category.name}`}
@@ -49,14 +43,15 @@ const Sidebar = ({ closeToggle, user }) => {
               onClick={handleCloseSidebar}
               key={category.name}
             >
+              <img src={category.image} className="w-8 h-8 rounded-full shadow-lg"  alt="category" />
               {category.name}
             </NavLink>
           ))}
         </div>
       </div>
 
-      <div className ="px-5 mt-40 justify-center items-center ">
-            <h5 className="ml-2">MagniFique by Rohan</h5>
+      <div className ="px-5 mt-10 justify-center items-center ">
+            <h5 className=" flex ml-2 items-center justify-center ">MagniFique by Rohan</h5>
       <div className ="flex justify-center">
 
 
