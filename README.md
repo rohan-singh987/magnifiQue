@@ -5,6 +5,6 @@ A public platform where you can explore a wide range of ideas, display photograp
 
 ![Google Login!](/public/loginPage.png "Login using Google")
 
-npm/yarn libraries
+npm/yarn libraries   
 ``` yarn add @sanity/client @sanity/image-url react-google-login react-icons react-loader-spinner react-masonry-css react-router-dom uuid ```
 
